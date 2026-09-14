@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SadaLafz — Everyday Ideas</title>
+
+<meta name="description" content="SadaLafz — practical, easy-to-read ideas on lifestyle, technology, food, travel, money and health.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   SadaLafz Premium Design
+========================= */
+
+:root{
+  --navy:#101d36;
+  --navy2:#182846;
+  --gold:#dca83a;
+  --cream:#fff8e9;
+  --blue:#edf5ff;
+  --green:#edf9f2;
+  --peach:#fff0e8;
+  --purple:#f3efff;
+  --white:#ffffff;
+  --text:#172033;
+  --muted:#657087;
+  --border:#e2e7ef;
+  --background:#f5f7fa;
+  --shadow:0 15px 45px rgba(16,29,54,.10);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--background);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.65;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:var(--navy);
+  border-bottom:5px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.header-inner{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.logo{
+  font-family:"DM Serif Display",Georgia,serif;
+  font-size:32px;
+  color:white;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+nav{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+nav a{
+  color:#fff;
+  padding:10px 13px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+}
+
+nav a:hover,
+nav a.active{
+  background:var(--gold);
+  color:var(--navy);
+}
+
+.menu{
+  display:none;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:55px 0;
+  background:
+    radial-gradient(circle at top right,#fff1c7,transparent 35%),
+    linear-gradient(135deg,#fffdf8,#eef4fb);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.55fr .8fr;
+  gap:28px;
+  align-items:stretch;
+}
+
+.feature{
+  background:var(--cream);
+  border:1px solid #ead7a7;
+  border-top:7px solid var(--gold);
+  border-radius:22px;
+  padding:40px;
+  box-shadow:var(--shadow);
+}
+
+.badge{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--navy);
+  padding:6px 12px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  margin-bottom:18px;
+}
+
+.feature-image{
+  height:170px;
+  border-radius:16px;
+  background:
+    linear-gradient(135deg,#dfeeff,#eaf8f0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#71809a;
+  font-weight:700;
+  margin-bottom:25px;
+  border:1px dashed #b9c5d5;
+}
+
+h1,h2,h3{
+  font-family:"DM Serif Display",Georgia,serif;
+  line-height:1.15;
+}
+
+h1{
+  font-size:48px;
+  letter-spacing:-1.5px;
+  margin-bottom:15px;
+}
+
+.feature h1 a:hover{
+  color:#9a6b13;
+}
+
+.meta{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.description{
+  color:#566176;
+  font-size:17px;
+  max-width:720px;
+  margin-bottom:25px;
+}
+
+.button{
+  display:inline-block;
+  background:var(--navy);
+  color:white;
+  padding:12px 20px;
+  border-radius:9px;
+  font-weight:700;
+}
+
+.button:hover{
+  background:var(--gold);
+  color:var(--navy);
+}
+
+/* ================= TRENDING ================= */
+
+.trending{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+
+.trending h2{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.trend{
+  display:flex;
+  gap:15px;
+  padding:18px 0;
+  border-top:1px solid var(--border);
+}
+
+.number{
+  color:var(--gold);
+  font-size:20px;
+  font-weight:800;
+  min-width:30px;
+}
+
+.trend p{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.category{
+  color:#a16f12;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+/* ================= ADS ================= */
+
+.ad{
+  width:min(1180px,92%);
+  margin:25px auto;
+  background:white;
+  border:1px dashed #bdc7d6;
+  border-radius:12px;
+  padding:16px;
+  text-align:center;
+  color:#8994a6;
+  font-size:13px;
+}
+
+/* ================= SECTIONS ================= */
+
+.section{
+  padding:60px 0;
+}
+
+.section.alt{
+  background:#edf2f7;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.section-title{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  font-size:38px;
+}
+
+.section-title a{
+  color:#8d6519;
+  font-size:14px;
+  font-weight:700;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(16,29,54,.07);
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 20px 45px rgba(16,29,54,.13);
+}
+
+.card-image{
+  height:125px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:15px;
+}
+
+.lifestyle .card-image{background:var(--purple);}
+.food .card-image{background:var(--peach);}
+.health .card-image{background:var(--green);}
+.tech .card-image{background:var(--blue);}
+.travel .card-image{background:var(--cream);}
+.money .card-image{background:#e7f7ef;}
+
+.card-body{
+  padding:25px;
+}
+
+.card-body .category{
+  margin-bottom:10px;
+  display:block;
+}
+
+.card h3{
+  font-size:24px;
+  margin-bottom:12px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.read{
+  font-size:13px;
+  font-weight:800;
+  border-bottom:2px solid var(--gold);
+  padding-bottom:3px;
+}
+
+/* ================= NEWSLETTER ================= */
+
+.newsletter{
+  background:var(--navy);
+  border-top:6px solid var(--gold);
+  padding:60px 0;
+  color:white;
+  text-align:center;
+}
+
+.newsletter h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.newsletter p{
+  color:#cbd3e0;
+  max-width:600px;
+  margin:0 auto 25px;
+}
+
+.newsletter form{
+  display:flex;
+  max-width:520px;
+  margin:auto;
+  gap:10px;
+}
+
+.newsletter input{
+  flex:1;
+  padding:14px 16px;
+  border:0;
+  border-radius:9px;
+  outline:none;
+}
+
+.newsletter button{
+  background:var(--gold);
+  color:var(--navy);
+  border:0;
+  border-radius:9px;
+  padding:14px 22px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:white;
+  border-top:6px solid var(--gold);
+  padding:45px 0 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:50px;
+  padding-bottom:35px;
+}
+
+footer h3{
+  font-size:23px;
+  margin-bottom:12px;
+}
+
+footer p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+footer ul{
+  list-style:none;
+}
+
+footer li{
+  margin:8px 0;
+}
+
+footer li a{
+  color:var(--muted);
+  font-size:14px;
+}
+
+footer li a:hover{
+  color:#9a6b13;
+}
+
+.footer-bottom{
+  border-top:1px solid var(--border);
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#7c8798;
+  font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+  .header-inner{
+    min-height:70px;
+  }
+
+  nav{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:var(--navy);
+    flex-direction:column;
+    align-items:stretch;
+    padding:15px;
+  }
+
+  nav.show{
+    display:flex;
+  }
+
+  nav a{
+    text-align:center;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:37px;
+  }
+
+  .feature{
+    padding:25px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+
+  .newsletter h2{
+    font-size:32px;
+  }
+
+  .newsletter form{
+    flex-direction:column;
+  }
+
+  .newsletter button{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="container header-inner">
+
+    <a href="index.html" class="logo">
+      Sada<span>Lafz</span>
+    </a>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="#lifestyle">Lifestyle</a>
+      <a href="#tech">Tech</a>
+      <a href="#food">Food</a>
+      <a href="#travel">Travel</a>
+      <a href="#money">Money</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="feature">
+
+      <span class="badge">Health</span>
+
+      <div class="feature-image">
+        FEATURED STORY
+      </div>
+
+      <h1>
+        <a href="blog/why-walking-changes-everything.html">
+          Why walking 20 minutes a day changes more than you think
+        </a>
+      </h1>
+
+      <p class="meta">
+        By Amina Raza · September 10, 2026 · 6 min read
+      </p>
+
+      <p class="description">
+        A short daily walk is one of the few habits backed by decades of
+        research to improve mood, focus and long-term health — here's what
+        the science actually says, and how to make it stick.
+      </p>
+
+      <a class="button"
+         href="blog/why-walking-changes-everything.html">
+         Read story →
+      </a>
+
+    </div>
+
+
+    <!-- TRENDING -->
+
+    <aside class="trending">
+
+      <h2>Trending this week</h2>
+
+      <div class="trend">
+        <div class="number">01</div>
+        <p>
+          <span class="category">Money</span><br>
+          <a href="blog/budgeting-basics-50-30-20.html">
+            Budgeting basics: the 50/30/20 rule explained simply
+          </a>
+        </p>
+      </div>
+
+      <div class="trend">
+        <div class="number">02</div>
+        <p>
+          <span class="category">Tech</span><br>
+          <a href="blog/smartphone-battery-myths.html">
+            Smartphone battery myths you should stop believing
+          </a>
+        </p>
+      </div>
+
+      <div class="trend">
+        <div class="number">03</div>
+        <p>
+          <span class="category">Travel</span><br>
+          <a href="blog/hunza-valley-first-timers-guide.html">
+            A first-timer's guide to Hunza Valley
+          </a>
+        </p>
+      </div>
+
+      <div class="trend">
+        <div class="number">04</div>
+        <p>
+          <span class="category">Lifestyle</span><br>
+          <a href="blog/slow-mornings-routine.html">
+            Slow mornings: a routine that actually sticks
+          </a>
+        </p>
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<div class="ad">
+  Advertisement space
+</div>
+
+
+<!-- LATEST READS -->
+
+<section class="section" id="lifestyle">
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Latest reads</h2>
+    <a href="#lifestyle">View all →</a>
+  </div>
+
+
+  <div class="cards">
+
+
+    <!-- Lifestyle -->
+
+    <article class="card lifestyle">
+
+      <div class="card-image">
+        LIFESTYLE
+      </div>
+
+      <div class="card-body">
+
+        <span class="category">Lifestyle · 5 min</span>
+
+        <h3>
+          <a href="blog/slow-mornings-routine.html">
+            Slow mornings: building a routine that actually sticks
+          </a>
+        </h3>
+
+        <p>
+          A simpler way to design a morning routine around your
+          actual energy levels.
+        </p>
+
+        <a class="read" href="blog/slow-mornings-routine.html">
+          Continue reading →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- Food -->
+
+    <article class="card food" id="food">
+
+      <div class="card-image">
+        FOOD
+      </div>
+
+      <div class="card-body">
+
+        <span class="category">Food · 4 min</span>
+
+        <h3>
+          <a href="blog/five-ingredient-dinners.html">
+            Five-ingredient dinners for busy weeknights
+          </a>
+        </h3>
+
+        <p>
+          Six simple recipes and a formula for building your own
+          easy weeknight meals.
+        </p>
+
+        <a class="read" href="blog/five-ingredient-dinners.html">
+          Continue reading →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- Health -->
+
+    <article class="card health">
+
+      <div class="card-image">
+        HEALTH
+      </div>
+
+      <div class="card-body">
+
+        <span class="category">Health · 6 min</span>
+
+        <h3>
+          <a href="blog/why-walking-changes-everything.html">
+            Why walking 20 minutes a day changes more than you think
+          </a>
+        </h3>
+
+        <p>
+          A practical look at the everyday habit and how to fit
+          it into a packed day.
+        </p>
+
+        <a class="read"
+           href="blog/why-walking-changes-everything.html">
+          Continue reading →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- Tech -->
+
+    <article class="card tech" id="tech">
+
+      <div class="card-image">
+        TECHNOLOGY
+      </div>
+
+      <div class="card-body">
+
+        <span class="category">Tech · 5 min</span>
+
+        <h3>
+          <a href="blog/smartphone-battery-myths.html">
+            Smartphone battery myths you should stop believing
+          </a>
+        </h3>
+
+        <p>
+          Overnight charging, background apps and zero-percent
+          charging — what actually matters.
+        </p>
+
+        <a class="read"
+           href="blog/smartphone-battery-myths.html">
+          Continue reading →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- Travel -->
+
+    <article class="card travel" id="travel">
+
+      <div class="card-image">
+        TRAVEL
+      </div>
+
+      <div class="card-body">
+
+        <span class="category">Travel · 7 min</span>
+
+        <h3>
+          <a href="blog/hunza-valley-first-timers-guide.html">
+            A first-timer's guide to Hunza Valley
+          </a>
+        </h3>
+
+        <p>
+          When to go, where to stay and the viewpoints worth
+          adding to a practical itinerary.
+        </p>
+
+        <a class="read"
+           href="blog/hunza-valley-first-timers-guide.html">
+          Continue reading →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- Money -->
+
+    <article class="card money" id="money">
+
+      <div class="card-image">
+        MONEY
+      </div>
+
+      <div class="card-body">
+
+        <span class="category">Money · 5 min</span>
+
+        <h3>
+          <a href="blog/budgeting-basics-50-30-20.html">
+            Budgeting basics: the 50/30/20 rule explained simply
+          </a>
+        </h3>
+
+        <p>
+          A three-bucket budgeting method designed to be quick
+          and easy to follow.
+        </p>
+
+        <a class="read"
+           href="blog/budgeting-basics-50-30-20.html">
+          Continue reading →
+        </a>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</div>
+
+</section>
+
+
+<div class="ad">
+  Advertisement space
+</div>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+  <div class="container">
+
+    <h2>Get one good read a week</h2>
+
+    <p>
+      No spam, no daily noise — just a short email when there's
+      something worth your time.
+    </p>
+
+    <form onsubmit="subscribe(event)">
+
+      <input
+        type="email"
+        placeholder="you@example.com"
+        required
+      >
+
+      <button type="submit">
+        Subscribe
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <a href="index.html" class="logo">
+          Sada<span>Lafz</span>
+        </a>
+
+        <p style="margin-top:15px;">
+          Everyday ideas on life, technology, food, travel and
+          money — written to be genuinely useful, not just
+          clicked on.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Categories</h3>
+
+        <ul>
+          <li><a href="#lifestyle">Lifestyle</a></li>
+          <li><a href="#tech">Technology</a></li>
+          <li><a href="#food">Food</a></li>
+          <li><a href="#travel">Travel</a></li>
+          <li><a href="#money">Money</a></li>
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h3>Site</h3>
+
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="privacy-policy.html">
+              Privacy policy
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 SadaLafz. All rights reserved.
+      </span>
+
+      <span>
+        Made with care for readers who like plain, honest writing.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("show");
+}
+
+function subscribe(event){
+  event.preventDefault();
+  alert("Thanks for subscribing to SadaLafz!");
+}
+
+</script>
+
+</body>
+</html>
